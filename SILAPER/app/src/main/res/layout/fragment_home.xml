@@ -32,7 +32,7 @@
             android:layout_height="28dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="4dp"
-            android:src="@drawable/menu"
+            android:src="@drawable/home"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -348,11 +348,9 @@
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
-    
+
 
 
 
