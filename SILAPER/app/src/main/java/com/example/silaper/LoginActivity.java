@@ -22,7 +22,7 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     //Deklarasi
     TextView Regis;
     EditText Email, Password;
@@ -30,20 +30,20 @@ public class MainActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String EmailHolder, PasswordHolder;
     ProgressDialog progressDialog;
-    String HttpURL = "http://192.168.43.153/Project/Android/user_login.php";
+    String HttpURL = "http://192.168.43.153/Android/user_login.php";
     boolean CheckEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         //Deklarasi Id
 
     Email = findViewById(R.id.editText_Email);
     Password = findViewById(R.id.editText_Password);
     Login = findViewById(R.id.button_login);
-    requestQueue = Volley.newRequestQueue(MainActivity.this);
-    progressDialog = new ProgressDialog(MainActivity.this);
+    requestQueue = Volley.newRequestQueue(LoginActivity.this);
+    progressDialog = new ProgressDialog(LoginActivity.this);
     Regis = findViewById(R.id.Register);
 
     //Membuat Show Password
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 UserLogin();
             }
             else {
-                Toast.makeText(MainActivity.this,"Salah satu Field Belum di isi",Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this,"Salah satu Field Belum di isi",Toast.LENGTH_LONG).show();
             }
         }
     });
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     Regis.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(getBaseContext(),Main2Activity.class));
+            startActivity(new Intent(getBaseContext(), RegisterActivity.class));
         }
     });
     }
@@ -82,15 +82,15 @@ public class MainActivity extends AppCompatActivity {
 
                         if (ServerResponse.equalsIgnoreCase("Data Anda benar")) {
 
-                            Toast.makeText(MainActivity.this, "Selamat datang di Data Covid-19", Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "Selamat datang di Data Covid-19", Toast.LENGTH_LONG).show();
 
                             finish();
 
-                            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, );
                             intent.putExtra("UserEmailTAG", EmailHolder);
                             startActivity(intent);
                         } else {
-                            Toast.makeText(MainActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
                         }
                     }
                 },
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
                         progressDialog.dismiss();
-                        Toast.makeText(MainActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, volleyError.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
             @Override
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
+        RequestQueue requestQueue = Volley.newRequestQueue(LoginActivity.this);
         requestQueue.add(stringRequest);
     }
 
