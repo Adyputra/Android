@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.silaper">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,9 +11,12 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity"/>
+        <activity android:name=".BottNavigation"></activity>
+        <activity android:name=".Main2Activity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
