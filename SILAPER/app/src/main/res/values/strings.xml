@@ -11,4 +11,5 @@
     <string name="alamat_pengiriman">Alamat Pengiriman</string>
     <string name="opsional">Opsional</string>
     <string name="proses_pesanan">Proses Pesanan</string>
+    <string name="simpan">Simpan</string>
 </resources>

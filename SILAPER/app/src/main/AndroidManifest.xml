@@ -12,8 +12,18 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pemesanan.DetailPesanan" android:theme="@style/Utama"/>
-        <activity android:name=".pemesanan.FormPemesanan" android:theme="@style/Utama"/>
+        <activity android:name=".profil.EditProfil"
+            android:label="Edit Profil"
+            />
+        <activity
+            android:name=".profil.ProfilUser"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".pemesanan.DetailPesanan"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".pemesanan.FormPemesanan"
+            android:theme="@style/Utama" />
         <activity android:name=".pemesanan.DataProduk" />
         <activity android:name=".BottNavigation" />
         <activity android:name=".RegisterActivity" />

@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.silaper.R;
+import com.example.silaper.profil.ProfilUser;
 
 public class DataProduk extends AppCompatActivity {
 
-    Button btnpesan, btndetail;
+    Button btnpesan, btndetail, btnprofil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class DataProduk extends AppCompatActivity {
 
         btnpesan = findViewById(R.id.button_pesan);
         btndetail = findViewById(R.id.button_detail);
+        btnprofil = findViewById(R.id.button_profil);
         btnpesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +34,14 @@ public class DataProduk extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(DataProduk.this, DetailPesanan.class);
                 intent.putExtra("kode_penjualan","mC8kI4SDcgB8OhbI");
+                startActivity(intent);
+            }
+        });
+
+        btnprofil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DataProduk.this, ProfilUser.class);
                 startActivity(intent);
             }
         });
