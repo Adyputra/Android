@@ -18,6 +18,12 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.silaper.configfile.ServerApi;
+import com.example.silaper.configfile.authdata;
+import com.example.silaper.pemesanan.DataProduk;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -74,23 +80,31 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.setMessage("Loading");
         progressDialog.show();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, HttpURL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, ServerApi.IPServer + "auth/login",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String ServerResponse) {
                         progressDialog.dismiss();
 
-                        if (ServerResponse.equalsIgnoreCase("Data Anda benar")) {
+                        try {
+                            JSONObject res = new JSONObject(ServerResponse);
+                            JSONObject respon = res.getJSONObject("respon");
+                            if (respon.getBoolean("status")) {
 
-                            Toast.makeText(LoginActivity.this, "Selamat datang di Data Covid-19", Toast.LENGTH_LONG).show();
+                                Toast.makeText(LoginActivity.this, respon.getString("pesan"), Toast.LENGTH_LONG).show();
 
-                            finish();
+                                JSONObject data = respon.getJSONObject("data");
+                                authdata.getInstance(getApplicationContext()).setIdcosturmer(data.getString("id"));
+                                finish();
 
-                            Intent intent = new Intent(LoginActivity.this, );
-                            intent.putExtra("UserEmailTAG", EmailHolder);
-                            startActivity(intent);
-                        } else {
-                            Toast.makeText(LoginActivity.this, ServerResponse, Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(LoginActivity.this, DataProduk.class);
+                                intent.putExtra("UserEmailTAG", EmailHolder);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(LoginActivity.this, respon.getString("pesan"), Toast.LENGTH_LONG).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
                     }
                 },
@@ -105,8 +119,8 @@ public class LoginActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
 
-                params.put("User_Email", EmailHolder);
-                params.put("User_Password", PasswordHolder);
+                params.put("email", EmailHolder);
+                params.put("password", PasswordHolder);
 
                 return params;
             }
