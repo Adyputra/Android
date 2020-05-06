@@ -21,6 +21,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.silaper.configfile.ServerApi;
 import com.example.silaper.configfile.authdata;
 import com.example.silaper.pemesanan.DataProduk;
+import com.example.silaper.profil.LupaPassword;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,7 +31,7 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
     //Deklarasi
-    TextView Regis;
+    TextView Regis, LupaPasswordtx;
     EditText Email, Password;
     Button Login;
     RequestQueue requestQueue;
@@ -51,7 +52,14 @@ public class LoginActivity extends AppCompatActivity {
     requestQueue = Volley.newRequestQueue(LoginActivity.this);
     progressDialog = new ProgressDialog(LoginActivity.this);
     Regis = findViewById(R.id.Register);
+        LupaPasswordtx = findViewById(R.id.lupapassword);
 
+        LupaPasswordtx.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, LupaPassword.class));
+            }
+        });
     //Membuat Show Password
 
     //login button

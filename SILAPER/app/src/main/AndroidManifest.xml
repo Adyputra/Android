@@ -12,9 +12,11 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".profil.EditProfil"
-            android:label="Edit Profil"
-            />
+        <activity android:name=".profil.LupaPassword"
+            android:theme="@style/Utama"   />
+        <activity
+            android:name=".profil.EditProfil"
+            android:label="Edit Profil" />
         <activity
             android:name=".profil.ProfilUser"
             android:theme="@style/Utama" />
