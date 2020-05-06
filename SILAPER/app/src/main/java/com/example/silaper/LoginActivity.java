@@ -37,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String EmailHolder, PasswordHolder;
     ProgressDialog progressDialog;
+    
     String HttpURL = "http://192.168.43.153/Android/user_login.php";
     boolean CheckEditText;
 
