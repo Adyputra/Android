@@ -33,7 +33,7 @@ public class DataProduk extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DataProduk.this, DetailPesanan.class);
-                intent.putExtra("kode_penjualan","mC8kI4SDcgB8OhbI");
+                intent.putExtra("kode_penjualan","hocCYLNhybqYUgeF");
                 startActivity(intent);
             }
         });

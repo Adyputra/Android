@@ -84,6 +84,16 @@ public class DetailPesanan extends AppCompatActivity {
                         .show();
             }
         });
+
+        btnkonfir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DetailPesanan.this, KonfirmasiBayar.class);
+                intent.putExtra("kode",kodejual);
+                startActivity(intent);
+            }
+        });
     }
 
     private void prosesbatalkan()
@@ -156,12 +166,13 @@ public class DetailPesanan extends AppCompatActivity {
                         String[] sta = {"Di Batalkan","Menunggu Pembayaran","Menunggu Konfirmasi Admin","Di Proses","Di Tolak","Selesai"};
                         statuspeesanan = data.getString("status");
                         txstatus.setText(sta[Integer.parseInt(data.getString("status"))]);
-                        if(!data.getString("bukti_tf").equals("")){
+                        Log.e("linkfoto", ServerApi.IP + data.getString("bukti_tf"));
+//                        if(!data.getString("bukti_tf").equals("")){
 
                             Picasso.get()
-                                    .load(ServerApi.IPServer + data.getString("bukti_tf"))
+                                    .load(ServerApi.IP + data.getString("bukti_tf"))
                                     .into(imgbukti);
-                        }
+//                        }
                         setpanelbystatus();
                     }else {
                         Toast.makeText(DetailPesanan.this, respon.getString("pesan"), Toast.LENGTH_SHORT).show();

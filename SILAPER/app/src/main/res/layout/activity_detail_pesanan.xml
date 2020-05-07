@@ -362,7 +362,7 @@
                     android:id="@+id/imgbukti"
                     android:layout_width="0dp"
                     android:layout_weight="0.45"
-                    android:layout_height="match_parent"
+                    android:layout_height="100dp"
                     />
 
             </LinearLayout>

@@ -13,4 +13,6 @@
     <string name="proses_pesanan">Proses Pesanan</string>
     <string name="simpan">Simpan</string>
     <string name="ganti_password">Ganti Password</string>
+    <string name="pastikan_gambar_jelas_dan_dapat_dibaca">Pastikan gambar jelas dan dapat dibaca</string>
+    <string name="unggah_bukti_transfer">Unggah Bukti Transfer</string>
 </resources>
