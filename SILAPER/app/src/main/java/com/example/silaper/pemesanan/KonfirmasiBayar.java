@@ -196,6 +196,7 @@ public class KonfirmasiBayar extends AppCompatActivity {
                         try{
 
                             Toast.makeText(KonfirmasiBayar.this, "Upload Bukti Berhasil ", Toast.LENGTH_SHORT).show();
+                            finish();
                             Intent in = new Intent(KonfirmasiBayar.this, DetailPesanan.class);
                             in.putExtra("kode_penjualan", kode);
                             startActivity(in);
@@ -214,6 +215,7 @@ public class KonfirmasiBayar extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         Log.e("voldua", "errornya : " + error.getMessage());
                         Toast.makeText(KonfirmasiBayar.this, "Upload Bukti Berhasil ", Toast.LENGTH_SHORT).show();
+                        finish();
                         Intent in = new Intent(KonfirmasiBayar.this, DetailPesanan.class);
                         in.putExtra("kode_penjualan", kode);
                         startActivity(in);
@@ -243,6 +245,7 @@ public class KonfirmasiBayar extends AppCompatActivity {
     }
 
     public void onBackPressed() {
+        finish();
         Intent dompet = new Intent(KonfirmasiBayar.this , DetailPesanan.class);
         dompet.putExtra("kode_penjualan", kode);
         startActivity(dompet);
