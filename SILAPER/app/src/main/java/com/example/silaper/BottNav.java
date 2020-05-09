@@ -1,42 +1,42 @@
 package com.example.silaper;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.FrameLayout;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.FrameLayout;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class BottNavigation extends AppCompatActivity {
+public class BottNav extends AppCompatActivity {
 
-    private BottomNavigationView  mMainNav;
+    private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
 
-    private HomeFragment homeFragment;
-    private ShopFragment shopFragment;
-    private HelpFragment helpFragment;
+    private Home homeFragment;
+    private Shop shopFragment;
+    private Help helpFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bott_navigation);
+        setContentView(R.layout.activity_bott_nav);
 
         mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
 
-        homeFragment = new HomeFragment();
-        shopFragment = new ShopFragment();
-        helpFragment = new HelpFragment();
+        homeFragment = new Home();
+        shopFragment = new Shop();
+        helpFragment = new Help();
 
         mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.nav_home :
+                    case R.id.nav_home:
                         setFragment(homeFragment);
                         return true;
                     case R.id.nav_shop:
@@ -54,8 +54,8 @@ public class BottNavigation extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.main_frame, fragment);
                 fragmentTransaction.commit();
-
             }
+
         });
     }
 }
