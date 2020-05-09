@@ -3,14 +3,43 @@
     package="com.example.silaper">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".configfile.AppController"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="SILAPER"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+=======
+        <activity android:name=".pemesanan.KonfirmasiBayar"
+            android:label="Konfirmasi Pembayaran" />
+        <activity
+            android:name=".profil.GantiPassword"
+            android:label="Ganti Password" />
+        <activity
+            android:name=".profil.LupaPassword"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".profil.EditProfil"
+            android:label="Edit Profil" />
+        <activity
+            android:name=".profil.ProfilUser"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".pemesanan.DetailPesanan"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".pemesanan.FormPemesanan"
+            android:theme="@style/Utama" />
+        <activity android:name=".pemesanan.DataProduk" />
+        <activity android:name=".BottNav" />
+>>>>>>> 79a0ec18658f1248e2fec71d71099bfac7519c5e
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity

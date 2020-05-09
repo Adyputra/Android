@@ -1,6 +1,10 @@
 package com.example.silaper;
 
 import android.os.Bundle;
+<<<<<<< HEAD:SILAPER/app/src/main/java/com/example/silaper/Home.java
+=======
+
+>>>>>>> 79a0ec18658f1248e2fec71d71099bfac7519c5e:SILAPER/app/src/main/java/com/example/silaper/HomeFragment.java
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
