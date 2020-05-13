@@ -13,6 +13,7 @@
         android:icon="@drawable/logo"
         android:label="SILAPER"
         android:roundIcon="@drawable/logo"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".pemesanan.KonfirmasiBayar"
