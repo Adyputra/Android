@@ -16,6 +16,8 @@
         android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
+=======
         <activity android:name=".pemesanan.KonfirmasiBayar"
             android:label="Konfirmasi Pembayaran" />
         <activity
@@ -37,7 +39,8 @@
             android:name=".pemesanan.FormPemesanan"
             android:theme="@style/Utama" />
         <activity android:name=".pemesanan.DataProduk" />
-        <activity android:name=".BottNavigation" />
+        <activity android:name=".BottNav" />
+>>>>>>> 79a0ec18658f1248e2fec71d71099bfac7519c5e
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity
