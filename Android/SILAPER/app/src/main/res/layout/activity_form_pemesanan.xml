@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    android:orientation="vertical"
+    tools:context=".pemesanan.FormPemesanan">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Form Pemesanan"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Nama Pemesan"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/txnamapemesan"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Nama Barang"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/txnamabarang"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Harga Barang"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/txhargabarang"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="match_parent"
+                    android:text="-"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Jumlah Pembelian"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/btnminqty"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/shapeborder"
+                        android:text="-"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorWhite"
+                        android:gravity="center_horizontal" />
+                    <TextView
+                        android:layout_width="80dp"
+                        android:textAlignment="center"
+                        android:id="@+id/txqtybeli"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:gravity="center_horizontal" />
+                    <Button
+                        android:id="@+id/btnplusqty"
+                        android:layout_width="50dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/shapeborder"
+                        android:text="+"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorWhite"
+                        android:gravity="center_horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Total Bayar"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/txtotal"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="match_parent"
+                    android:text="Rp 0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Pilih Pembayaran"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txakunbank"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="match_parent"
+                    android:text="Belum Di Pilih"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    tools:ignore="NestedWeights" />
+                    <Button
+                        android:id="@+id/btnpilihbank"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shapeborder"
+                        android:text="Pilih"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorWhite" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Alamat Pengiriman"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etxalamat"
+                        android:padding="16dp"
+                        android:textSize="14sp"
+                        android:background="@android:color/white"
+                        android:hint="@string/alamat_pengiriman"
+                        android:inputType="textMultiLine"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
+                    android:text="Catatan"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_weight="0.45"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/etcatatan"
+                        android:padding="16dp"
+                        android:textSize="14sp"
+                        android:background="@android:color/white"
+                        android:hint="@string/opsional"
+                        android:inputType="textMultiLine"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:text="@string/proses_pesanan"
+                android:background="@drawable/round_bg"
+                android:id="@+id/btnprosespesanan"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

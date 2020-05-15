@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.silaper">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".configfile.AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="SILAPER"
+        android:roundIcon="@drawable/logo"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".pemesanan.KonfirmasiBayar"
+            android:label="Konfirmasi Pembayaran" />
+        <activity
+            android:name=".profil.GantiPassword"
+            android:label="Ganti Password" />
+        <activity
+            android:name=".profil.LupaPassword"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".profil.EditProfil"
+            android:label="Edit Profil" />
+        <activity
+            android:name=".profil.ProfilUser"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".pemesanan.DetailPesanan"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".pemesanan.FormPemesanan"
+            android:theme="@style/Utama" />
+        <activity android:name=".pemesanan.DataProduk" />
+        <activity android:name=".BottNavigation" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
