@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     String EmailHolder, PasswordHolder;
     ProgressDialog progressDialog;
 
-    String HttpURL = "http://192.168.43.153/Android/user_login.php";
+    String HttpURL = "http://192.168.100.7/Android/user_login.php";
     boolean CheckEditText;
     GoogleSignInClient mGoogleSignInClient;
     @Override

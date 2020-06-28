@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     RequestQueue requestQueue;
     String NameHolder, EmailHolder, PasswordHolder, RepassHolder;
     ProgressDialog progressDialog;
-    String HttpUrl = "http://192.168.43.153/Android/User-Registration.php";
+    String HttpUrl = "http://192.168.100.7/Android/User-Registration.php";
     Boolean CheckEditText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
