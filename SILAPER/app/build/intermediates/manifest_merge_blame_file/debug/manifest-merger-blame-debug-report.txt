@@ -1,0 +1,190 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.silaper"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="15"
+8-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:5:5-67
+11-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:6:5-65
+12-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:6:22-62
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:7:5-81
+13-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:8:5-80
+14-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:8:22-77
+15
+16    <application
+16-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:10:5-51:19
+17        android:name="com.example.silaper.configfile.AppController"
+17-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:11:9-49
+18        android:allowBackup="true"
+18-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:12:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@drawable/logo"
+21-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:13:9-38
+22        android:label="SILAPER"
+22-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:14:9-32
+23        android:roundIcon="@drawable/logo"
+23-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:15:9-43
+24        android:supportsRtl="true"
+24-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:16:9-35
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme" >
+26-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:17:9-40
+27        <activity
+27-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:18:9-19:53
+28            android:name="com.example.silaper.pemesanan.KonfirmasiBayar"
+28-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:18:19-60
+29            android:label="Konfirmasi Pembayaran" />
+29-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:19:13-50
+30        <activity
+30-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:20:9-22:46
+31            android:name="com.example.silaper.profil.GantiPassword"
+31-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:21:13-49
+32            android:label="Ganti Password" />
+32-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:22:13-43
+33        <activity
+33-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:23:9-25:44
+34            android:name="com.example.silaper.profil.LupaPassword"
+34-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:24:13-48
+35            android:theme="@style/Utama" />
+35-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:25:13-41
+36        <activity
+36-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:26:9-28:43
+37            android:name="com.example.silaper.profil.EditProfil"
+37-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:27:13-46
+38            android:label="Edit Profil" />
+38-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:28:13-40
+39        <activity
+39-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:29:9-31:44
+40            android:name="com.example.silaper.profil.ProfilUser"
+40-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:30:13-46
+41            android:theme="@style/Utama" />
+41-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:31:13-41
+42        <activity
+42-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:32:9-34:44
+43            android:name="com.example.silaper.pemesanan.DetailPesanan"
+43-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:33:13-52
+44            android:theme="@style/Utama" />
+44-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:34:13-41
+45        <activity
+45-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:35:9-37:44
+46            android:name="com.example.silaper.pemesanan.FormPemesanan"
+46-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:36:13-52
+47            android:theme="@style/Utama" />
+47-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:37:13-41
+48        <activity android:name="com.example.silaper.pemesanan.DataProduk" />
+48-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:38:9-58
+48-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:38:19-55
+49        <activity android:name="com.example.silaper.BottNavigation" />
+49-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:39:9-52
+49-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:39:19-49
+50        <activity android:name="com.example.silaper.RegisterActivity" />
+50-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:40:9-54
+50-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:40:19-51
+51        <activity android:name="com.example.silaper.LoginActivity" />
+51-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:41:9-51
+51-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:41:19-48
+52        <activity
+52-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:42:9-50:20
+53            android:name="com.example.silaper.SplashActivity"
+53-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:43:13-43
+54            android:theme="@style/SplashTheme" >
+54-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:44:13-47
+55            <intent-filter>
+55-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:45:13-49:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:46:17-69
+56-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:46:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:48:17-77
+58-->E:\xampp\htdocs\Mei\Android\SILAPER\app\src\main\AndroidManifest.xml:48:27-74
+59            </intent-filter>
+60        </activity>
+61        <activity
+61-->[com.karumi:dexter:5.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\36a560157845e3976904a9b797546845\jetified-dexter-5.0.0\AndroidManifest.xml:27:9-29:72
+62            android:name="com.karumi.dexter.DexterActivity"
+62-->[com.karumi:dexter:5.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\36a560157845e3976904a9b797546845\jetified-dexter-5.0.0\AndroidManifest.xml:28:13-60
+63            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+63-->[com.karumi:dexter:5.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\36a560157845e3976904a9b797546845\jetified-dexter-5.0.0\AndroidManifest.xml:29:13-69
+64
+65        <provider
+65-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:12:9-20:20
+66            android:name="androidx.core.content.FileProvider"
+66-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:13:13-62
+67            android:authorities="com.example.silaper.easyphotopicker.fileprovider"
+67-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:14:13-80
+68            android:exported="false"
+68-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:15:13-37
+69            android:grantUriPermissions="true" >
+69-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:16:13-47
+70            <meta-data
+70-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:17:13-19:53
+71                android:name="android.support.FILE_PROVIDER_PATHS"
+71-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:18:17-67
+72                android:resource="@xml/filepaths" />
+72-->[com.github.jkwiecien:EasyImage:1.3.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\49265d53d4923b8a0b3972bd5b963aba\jetified-EasyImage-1.3.1\AndroidManifest.xml:19:17-50
+73        </provider>
+74        <provider
+74-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ee218a59393590d051b169a633a8aec1\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+75            android:name="com.squareup.picasso.PicassoProvider"
+75-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ee218a59393590d051b169a633a8aec1\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+76            android:authorities="com.example.silaper.com.squareup.picasso"
+76-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ee218a59393590d051b169a633a8aec1\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+77            android:exported="false" />
+77-->[com.squareup.picasso:picasso:2.71828] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\ee218a59393590d051b169a633a8aec1\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+78
+79        <activity
+79-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:23:9-27:75
+80            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+80-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:24:13-93
+81            android:excludeFromRecents="true"
+81-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:25:13-46
+82            android:exported="false"
+82-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:26:13-37
+83            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+83-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:27:13-72
+84        <!--
+85            Service handling Google Sign-In user revocation. For apps that do not integrate with
+86            Google Sign-In, this service will never be started.
+87        -->
+88        <service
+88-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:33:9-36:110
+89            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+89-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:34:13-89
+90            android:exported="true"
+90-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:35:13-36
+91            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+91-->[com.google.android.gms:play-services-auth:18.0.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\d6777383efc5d4e7689d28c52832110a\play-services-auth-18.0.0\AndroidManifest.xml:36:13-107
+92
+93        <activity
+93-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\593a54ff613c3d9a289e47a60d5f7b29\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+94-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\593a54ff613c3d9a289e47a60d5f7b29\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+95            android:exported="false"
+95-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\593a54ff613c3d9a289e47a60d5f7b29\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+96-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\593a54ff613c3d9a289e47a60d5f7b29\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+97
+98        <meta-data
+98-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7df7086e8973bf7dfe628db8ad83c72\jetified-play-services-basement-17.1.1\AndroidManifest.xml:23:9-25:69
+99            android:name="com.google.android.gms.version"
+99-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7df7086e8973bf7dfe628db8ad83c72\jetified-play-services-basement-17.1.1\AndroidManifest.xml:24:13-58
+100            android:value="@integer/google_play_services_version" />
+100-->[com.google.android.gms:play-services-basement:17.1.1] C:\Users\ASUS\.gradle\caches\transforms-2\files-2.1\b7df7086e8973bf7dfe628db8ad83c72\jetified-play-services-basement-17.1.1\AndroidManifest.xml:25:13-66
+101    </application>
+102
+103</manifest>

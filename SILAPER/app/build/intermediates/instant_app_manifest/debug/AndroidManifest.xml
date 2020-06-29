@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.silaper"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.example.silaper.configfile.AppController"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@drawable/logo"
+        android:label="SILAPER"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.silaper.pemesanan.KonfirmasiBayar"
+            android:label="Konfirmasi Pembayaran" />
+        <activity
+            android:name="com.example.silaper.profil.GantiPassword"
+            android:label="Ganti Password" />
+        <activity
+            android:name="com.example.silaper.profil.LupaPassword"
+            android:theme="@style/Utama" />
+        <activity
+            android:name="com.example.silaper.profil.EditProfil"
+            android:label="Edit Profil" />
+        <activity
+            android:name="com.example.silaper.profil.ProfilUser"
+            android:theme="@style/Utama" />
+        <activity
+            android:name="com.example.silaper.pemesanan.DetailPesanan"
+            android:theme="@style/Utama" />
+        <activity
+            android:name="com.example.silaper.pemesanan.FormPemesanan"
+            android:theme="@style/Utama" />
+        <activity android:name="com.example.silaper.pemesanan.DataProduk" />
+        <activity android:name="com.example.silaper.BottNavigation" />
+        <activity android:name="com.example.silaper.RegisterActivity" />
+        <activity android:name="com.example.silaper.LoginActivity" />
+        <activity
+            android:name="com.example.silaper.SplashActivity"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.karumi.dexter.DexterActivity"
+            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.silaper.easyphotopicker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.silaper.com.squareup.picasso"
+            android:exported="false" />
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
