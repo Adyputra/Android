@@ -20,6 +20,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".pemesanan.KonfirmasiBayar"
             android:label="Konfirmasi Pembayaran" />
+        <activity android:name=".MapsActivity"
+            android:label="Map" />
         <activity
             android:name=".profil.GantiPassword"
             android:label="Ganti Password" />

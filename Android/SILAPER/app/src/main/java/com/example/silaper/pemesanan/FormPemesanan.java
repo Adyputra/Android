@@ -40,7 +40,7 @@ public class FormPemesanan extends AppCompatActivity {
     int hargabarang=0;
     ArrayList<String> databank=new ArrayList<String>();
     ArrayList<String> indexdatabank=new ArrayList<String>();
-    EditText txalamat, txcatatan;
+    EditText txalamat, txcatatan, txno_hp;
     TextView txqtybeli, txnama, txnamabarang, txharga, txbank, txtotalbeli;
     Button btnmin, btnplus, btnproses, btnpilihbank;
     ProgressDialog progressDialog;
@@ -66,6 +66,7 @@ public class FormPemesanan extends AppCompatActivity {
         btnplus = findViewById(R.id.btnplusqty);
         btnproses = findViewById(R.id.btnprosespesanan);
         btnpilihbank = findViewById(R.id.btnpilihbank);
+        txno_hp = findViewById(R.id.extnohp);
         getdata();
 
         btnplus.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +113,8 @@ public class FormPemesanan extends AppCompatActivity {
             public void onClick(View v) {
                 if(kodebank.equals("")){
                     Toast.makeText(FormPemesanan.this, "Pilih Pembayaran Terlebih Dahulu", Toast.LENGTH_SHORT).show();
+                }else if(txno_hp.getText().toString().isEmpty()){
+                    Toast.makeText(FormPemesanan.this, "No HP Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
                 }else if(txalamat.getText().toString().isEmpty()){
                     Toast.makeText(FormPemesanan.this, "Alamat Pengiriman Tidak Boleh Kosong", Toast.LENGTH_SHORT).show();
                 }else{
@@ -168,6 +171,7 @@ public class FormPemesanan extends AppCompatActivity {
                 params.put("qty", txqtybeli.getText().toString());
                 params.put("alamat_kirim", txalamat.getText().toString());
                 params.put("catatan_member", txcatatan.getText().toString());
+                params.put("no_hp", txno_hp.getText().toString());
 
                 return params;
             }

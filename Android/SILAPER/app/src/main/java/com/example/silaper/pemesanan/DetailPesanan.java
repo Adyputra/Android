@@ -36,7 +36,7 @@ import java.util.ArrayList;
 public class DetailPesanan extends AppCompatActivity {
 
     String kodejual="", statuspeesanan="";
-    TextView txqtybeli, txnama, txnamabarang, txharga, txbank, txtotalbeli, txalamat, txcatatan, txstatus, txcatatanadmin;
+    TextView txqtybeli, txnama, txnamabarang, txharga, txbank, txtotalbeli, txalamat, txcatatan, txstatus, txcatatanadmin, txnohp;
     Button btnkonfir, btnbatalkan;
     ProgressDialog progressDialog;
     LinearLayout lnpanel, lngaris;
@@ -63,6 +63,7 @@ public class DetailPesanan extends AppCompatActivity {
         lnpanel = findViewById(R.id.panelcatatanadmin);
         lngaris = findViewById(R.id.garispanelcatatanadmin);
         imgbukti = findViewById(R.id.imgbukti);
+        txnohp = findViewById(R.id.txnohpview);
         getdata();
 
         btnbatalkan.setOnClickListener(new View.OnClickListener() {
@@ -161,6 +162,7 @@ public class DetailPesanan extends AppCompatActivity {
                         txalamat.setText(data.getString("alamat_kirim"));
                         txcatatan.setText(data.getString("catatan_member"));
                         txcatatanadmin.setText(data.getString("catatan_status"));
+                        txnohp.setText(data.getString("no_hp"));
                         txbank.setText(data.getString("nama_bank") + " ("+data.getString("no_rek")+") a/n "+data.getString("nama_rek"));
 
                         String[] sta = {"Di Batalkan","Menunggu Pembayaran","Menunggu Konfirmasi Admin","Di Proses","Di Tolak","Selesai"};

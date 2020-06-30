@@ -165,6 +165,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:background="@color/lightGrey" />
+                    <RelativeLayout
+                        android:id="@+id/rtopenmap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:padding="15dp"
+                            android:text="Buka Map"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="16sp"
+                            android:drawableRight="@drawable/ic_chevron_right_grey" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/lightGrey" />
 
                     <RelativeLayout
                         android:id="@+id/rtkeluarakun"

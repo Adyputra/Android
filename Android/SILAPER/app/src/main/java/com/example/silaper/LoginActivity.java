@@ -1,6 +1,7 @@
 package com.example.silaper;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,7 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -107,6 +110,23 @@ public class LoginActivity extends AppCompatActivity {
         }
     });
     }
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.logo)
+                .setTitle("Keluar Aplikasi")
+                .setMessage("Apakah Anda Ingin Keluar Dari Aplikasi?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ActivityCompat.finishAffinity(LoginActivity.this);
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("Tidak", null)
+                .show();
+    }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -169,7 +189,7 @@ public class LoginActivity extends AppCompatActivity {
                                 authdata.getInstance(getApplicationContext()).setIdcosturmer(data.getString("id"));
                                 finish();
 
-                                Intent intent = new Intent(LoginActivity.this, DataProduk.class);
+                                Intent intent = new Intent(LoginActivity.this, BottNavigation.class);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(LoginActivity.this, respon.getString("pesan"), Toast.LENGTH_LONG).show();
@@ -223,7 +243,8 @@ public class LoginActivity extends AppCompatActivity {
                                 authdata.getInstance(getApplicationContext()).setIdcosturmer(data.getString("id"));
                                 finish();
 
-                                Intent intent = new Intent(LoginActivity.this, DataProduk.class);
+                                Intent intent = new Intent(LoginActivity.this, BottNavigation.class);
+//                                Intent intent = new Intent(LoginActivity.this, DataProduk.class);
                                 intent.putExtra("UserEmailTAG", EmailHolder);
                                 startActivity(intent);
                             } else {

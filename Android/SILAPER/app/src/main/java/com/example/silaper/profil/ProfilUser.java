@@ -1,8 +1,10 @@
 package com.example.silaper.profil;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -17,6 +19,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.silaper.LoginActivity;
+import com.example.silaper.MapsActivity;
 import com.example.silaper.R;
 import com.example.silaper.configfile.AppController;
 import com.example.silaper.configfile.ServerApi;
@@ -32,7 +36,7 @@ public class ProfilUser extends AppCompatActivity {
 
     String daftar_via="1";
     TextView txnama, txemail, txtgantipass;
-    RelativeLayout rtedit, rtkeluar, rteditpass, rtopenwa;
+    RelativeLayout rtedit, rtkeluar, rteditpass, rtopenwa, btnrtopenmap;
     ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,8 @@ public class ProfilUser extends AppCompatActivity {
         rtedit = findViewById(R.id.rteditakun);
         rteditpass = findViewById(R.id.rtgantipassword);
         rtopenwa = findViewById(R.id.rtopenwa);
+        btnrtopenmap = findViewById(R.id.rtopenmap);
+        rtkeluar = findViewById(R.id.rtkeluarakun);
 
         getdata();
 
@@ -53,6 +59,32 @@ public class ProfilUser extends AppCompatActivity {
             txtgantipass.setText("Ganti Password (Disable)");
         }
 
+        rtkeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(ProfilUser.this);
+                builder.setCancelable(false);
+                builder.setMessage("Apakah Anda Ingin Keluar ? ");
+                builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        authdata.getInstance(getApplicationContext()).logout();
+                        startActivity(new Intent(ProfilUser.this, LoginActivity.class)
+                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
+
+                    }
+                });
+                builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
         rteditpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +105,13 @@ public class ProfilUser extends AppCompatActivity {
                 intent.putExtra("nama",txnama.getText().toString());
                 intent.putExtra("email",txemail.getText().toString());
                 intent.putExtra("daftar_via",daftar_via);
+                startActivity(intent);
+            }
+        });
+        btnrtopenmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfilUser.this, MapsActivity.class);
                 startActivity(intent);
             }
         });

@@ -264,6 +264,47 @@
                     android:layout_width="0dp"
                     android:layout_weight="0.35"
                     android:layout_height="match_parent"
+                    android:text="No HP"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_weight="0.45"
+                    android:paddingTop="10dp"
+                    android:background="@android:color/white"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/extnohp"
+                        android:padding="16dp"
+                        android:textSize="14sp"
+                        android:hint="@string/no_hp_aktif"
+                        android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@color/colorWhite"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:layout_height="match_parent"
                     android:text="Alamat Pengiriman"
                     android:textColor="@color/colorWhite"
                     android:textSize="15sp"/>
@@ -273,6 +314,8 @@
                     android:layout_width="0dp"
                     android:layout_marginTop="-10dp"
                     android:layout_weight="0.45"
+                    android:paddingTop="10dp"
+                    android:background="@android:color/white"
                     android:layout_height="wrap_content">
 
                     <EditText
@@ -281,7 +324,6 @@
                         android:id="@+id/etxalamat"
                         android:padding="16dp"
                         android:textSize="14sp"
-                        android:background="@android:color/white"
                         android:hint="@string/alamat_pengiriman"
                         android:inputType="textMultiLine"/>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -313,6 +355,8 @@
                     android:layout_width="0dp"
                     android:layout_marginTop="-10dp"
                     android:layout_weight="0.45"
+                    android:paddingTop="10dp"
+                    android:background="@android:color/white"
                     android:layout_height="wrap_content">
 
                     <EditText
@@ -321,7 +365,6 @@
                         android:id="@+id/etcatatan"
                         android:padding="16dp"
                         android:textSize="14sp"
-                        android:background="@android:color/white"
                         android:hint="@string/opsional"
                         android:inputType="textMultiLine"/>
                 </com.google.android.material.textfield.TextInputLayout>
