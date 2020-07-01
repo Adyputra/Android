@@ -9,19 +9,18 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginTop="676dp"
-        app:itemBackground="@color/colorAccent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/purple"
         app:itemIconTint="@color/nav_item_color"
         app:itemTextColor="@color/nav_item_color"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/nav_items" />
 
     <FrameLayout
         android:id="@+id/main_frame"
-        android:layout_width="409dp"
-        android:layout_height="674dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
