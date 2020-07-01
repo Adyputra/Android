@@ -29,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 }else{
 
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    startActivity(new Intent(getApplicationContext(), BottNavigation.class));
                     finish();
                 }
     }

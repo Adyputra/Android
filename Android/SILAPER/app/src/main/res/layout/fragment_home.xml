@@ -8,10 +8,10 @@
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/silaper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -22,24 +22,33 @@
             android:text="@string/silaper_media_jaya"
             android:textColor="#FFF"
             android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.126"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.843" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="377dp"
-        android:layout_height="126dp"
-        android:layout_marginTop="56dp"
+        android:id="@+id/selamatdatang"
+        android:layout_width="347dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/bg"
         android:orientation="horizontal"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/silaper">
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,14 +89,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
+        android:id="@+id/pilih"
+        android:layout_width="356dp"
+        android:layout_height="56dp"
         android:orientation="horizontal"
         android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/selamatdatang">
 
         <TextView
             android:layout_width="wrap_content"
@@ -115,20 +124,22 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_width="356dp"
+        android:layout_height="487dp"
         android:background="@drawable/bg_menu"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/pilih"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints">
 
         <Button
             android:id="@+id/lembaran"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
+            android:layout_width="324dp"
+            android:layout_height="75dp"
             android:layout_marginTop="60dp"
             android:background="@color/purple"
             android:drawableLeft="@drawable/paper"
@@ -143,9 +154,9 @@
 
         <Button
             android:id="@+id/kalender"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="56dp"
+            android:layout_width="324dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="32dp"
             android:background="@color/purple"
             android:drawableLeft="@drawable/list_kalender"
             android:fontFamily="@font/roboto_medium"
@@ -153,15 +164,15 @@
             android:textColor="#ffff"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lembaran" />
 
         <Button
             android:id="@+id/undangan"
-            android:layout_width="350dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="64dp"
+            android:layout_width="324dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="28dp"
             android:background="@color/purple"
             android:drawableLeft="@drawable/newinvit"
             android:fontFamily="@font/roboto_medium"
@@ -169,7 +180,7 @@
             android:textColor="#ffff"
             android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintHorizontal_bias="0.523"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/kalender" />
 
