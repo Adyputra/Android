@@ -41,6 +41,7 @@
             android:name=".pemesanan.FormPemesanan"
             android:theme="@style/Utama" />
         <activity android:name=".pemesanan.DataProduk" />
+        <activity android:name=".Undangan" />
         <activity android:name=".BottNavigation" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />

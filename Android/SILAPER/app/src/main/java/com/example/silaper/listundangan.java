@@ -13,6 +13,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.silaper.configfile.authdata;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,18 +27,18 @@ public class listundangan extends AppCompatActivity {
     List<ModalUndangan> modelDataList;
     AdapterUndangan adapterUndangan;
     public static final String IPServer="http://192.168.100.10/Project/Bersama/api/ListUndangan";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listundangan);
         recyclerView = findViewById(R.id.recyclerundangan);
-
         loaddetail();
     }
 
     public void loaddetail()
     {
-        StringRequest senddata = new StringRequest(Request.Method.GET, IPServer , new Response.Listener<String>(){
+        StringRequest senddata = new StringRequest(Request.Method.GET, IPServer, new Response.Listener<String>(){
             @Override
             public void onResponse(String response) {
                 JSONObject res = null;

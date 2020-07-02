@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
         btnlembaran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(getActivity(), kalender.class);
+                Intent a = new Intent(getContext(), kalender.class);
                 startActivity(a);
             }
         });
@@ -75,7 +75,7 @@ public class HomeFragment extends Fragment {
         btnkalender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(getActivity(), kalender.class);
+                Intent b = new Intent(getContext(), kalender.class);
                 startActivity(b);
             }
         });
@@ -83,7 +83,7 @@ public class HomeFragment extends Fragment {
         btnundangan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent c = new Intent(getActivity(), Undangan.class);
+                Intent c = new Intent(getContext(), Undangan.class);
                 startActivity(c);
             }
         });

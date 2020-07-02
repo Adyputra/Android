@@ -7,16 +7,7 @@
     android:background="@color/purple"
     tools:context=".listundangan">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerundangan"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        tools:listitem="@layout/activity_listundangan"/>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,10 +31,24 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="7dp"
-            tools:layout_editor_absoluteY="48dp">
+            tools:layout_editor_absoluteY="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerundangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                tools:listitem="@layout/activity_listundangan"/>
 
 
         </ScrollView>
