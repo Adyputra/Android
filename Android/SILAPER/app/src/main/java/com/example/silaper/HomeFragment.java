@@ -1,10 +1,11 @@
 package com.example.silaper;
 
+import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
@@ -23,6 +24,8 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Button btnlembaran, btnkalender, btnundangan;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -58,7 +61,33 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        btnlembaran = v.findViewById(R.id.lembaran);
+        btnlembaran.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(getContext(), kalender.class);
+                startActivity(a);
+            }
+        });
+        btnkalender = v.findViewById(R.id.kalender);
+        btnkalender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent b = new Intent(getContext(), kalender.class);
+                startActivity(b);
+            }
+        });
+        btnundangan = v.findViewById(R.id.undangan);
+        btnundangan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent c = new Intent(getContext(), Undangan.class);
+                startActivity(c);
+            }
+        });
+
+        return v;
     }
 }
