@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
-            android:text="Selamt Datang!"
+            android:text="Selamat Datang!"
             android:textColor="#ffff"
             android:textSize="24dp"
 
@@ -113,7 +113,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="356dp"
         android:layout_height="487dp"
@@ -127,56 +127,16 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints">
 
-        <Button
-            android:id="@+id/lembaran"
-            android:layout_width="324dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="60dp"
-            android:background="@color/purple"
-            android:drawableLeft="@drawable/paper"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Cetak Lembaran"
-            android:textColor="#ffff"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/kalender"
-            android:layout_width="324dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="32dp"
-            android:background="@color/purple"
-            android:drawableLeft="@drawable/list_kalender"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Cetak Kalender"
-            android:textColor="#ffff"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.507"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lembaran" />
-
-        <Button
-            android:id="@+id/undangan"
-            android:layout_width="324dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/purple"
-            android:drawableLeft="@drawable/newinvit"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Cetak Undangan"
-            android:textColor="#ffff"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/kalender" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tmpdata"/>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

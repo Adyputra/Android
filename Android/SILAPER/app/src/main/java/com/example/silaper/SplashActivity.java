@@ -7,7 +7,6 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.silaper.configfile.authdata;
-import com.example.silaper.pemesanan.DataProduk;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -29,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 }else{
 
-                    startActivity(new Intent(getApplicationContext(), BottNavigation.class));
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                     finish();
                 }
     }

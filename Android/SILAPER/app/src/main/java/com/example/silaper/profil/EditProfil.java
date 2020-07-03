@@ -67,12 +67,12 @@ public class EditProfil extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
-        finish();
-        Intent intent = new Intent(EditProfil.this, ProfilUser.class);
-        startActivity(intent);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        finish();
+//        Intent intent = new Intent(EditProfil.this, ProfilUser.class);
+//        startActivity(intent);
+//    }
     void prosesdata(){
 
         progressDialog.setMessage("Memproses Data. .");

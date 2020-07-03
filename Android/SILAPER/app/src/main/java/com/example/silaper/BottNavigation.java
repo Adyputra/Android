@@ -9,53 +9,62 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.example.silaper.profil.ProfilUser;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class BottNavigation extends AppCompatActivity {
+public class BottNavigation extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private BottomNavigationView  mMainNav;
     private FrameLayout mMainFrame;
 
     private HomeFragment homeFragment;
-    private ShopFragment shopFragment;
-    private HelpFragment helpFragment;
-
+//    private ShopFragment shopFragment;
+//    private HelpFragment helpFragment;
+    private ProfilUser profilUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bott_navigation);
 
-        mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
-        mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
-
         homeFragment = new HomeFragment();
-        shopFragment = new ShopFragment();
-        helpFragment = new HelpFragment();
+//        shopFragment = new ShopFragment();
+//        helpFragment = new HelpFragment();
+        profilUser = new ProfilUser();
+        loadFragment(homeFragment);
+        BottomNavigationView navView = findViewById(R.id.main_nav);
+        navView.setOnNavigationItemSelectedListener(this);
 
-        mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.nav_home :
-                        setFragment(homeFragment);
-                        return true;
-                    case R.id.nav_shop:
-                        setFragment(shopFragment);
-                        return true;
-                    case R.id.nav_help:
-                        setFragment(helpFragment);
-                        return true;
-                    default:
-                        return false;
-                }
-            }
 
-            private void setFragment(Fragment fragment) {
-                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.main_frame, fragment);
-                fragmentTransaction.commit();
 
-            }
-        });
+    }
+
+    private boolean loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.main_frame, fragment)
+                    .commit();
+            return true;
+        }
+        return false;
+    }
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Fragment fragment = null;
+
+        switch (item.getItemId()){
+            case R.id.nav_home :
+                fragment = homeFragment;
+                break;
+            case R.id.nav_akun :
+                fragment = profilUser;
+                break;
+//            case R.id.nav_shop:
+//                fragment = shopFragment;
+//                break;
+//            case R.id.nav_help:
+//                fragment = helpFragment;
+//                break;
+        }
+        return loadFragment(fragment);
     }
 }

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".produk.page.DetailProduk">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="left"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:id="@+id/txjudul"
+            android:layout_height="wrap_content"
+            android:text="Detail Produk"
+            android:paddingHorizontal="10dp"
+            android:textSize="17sp"
+            android:textColor="#fff"
+            android:layout_marginVertical="20dp"
+            />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imgcover"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Produk"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        android:id="@+id/namaproduk"
+        />
+    <TextView
+        android:id="@+id/txharga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Harga Produk"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi Produk"
+        android:textSize="15sp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        />
+    <TextView
+        android:id="@+id/txdeskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="deskripsi Produk"
+        android:textSize="13sp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        />
+
+    <Button
+        android:layout_width="275dp"
+        android:layout_marginTop="60dp"
+        android:layout_height="wrap_content"
+        android:text="Pesan Barang"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/round_bg"
+        android:id="@+id/btnpesan"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"/>
+</LinearLayout>

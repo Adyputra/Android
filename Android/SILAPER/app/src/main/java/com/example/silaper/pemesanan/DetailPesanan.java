@@ -20,6 +20,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.example.silaper.BottNavigation;
 import com.example.silaper.R;
 import com.example.silaper.configfile.AppController;
 import com.example.silaper.configfile.ServerApi;
@@ -154,7 +155,7 @@ public class DetailPesanan extends AppCompatActivity {
 
                         JSONObject data = res.getJSONObject("data");
                         txnama.setText(data.getString("nama"));
-                        txnamabarang.setText(data.getString("nama_kalender"));
+                        txnamabarang.setText(data.getString("nama_produk"));
                         txharga.setText(Util.setformatrupiah(data.getString("harga")));
                         txqtybeli.setText(data.getString("qty"));
                         int tmptotal = Integer.parseInt(data.getString("qty")) * Integer.parseInt(data.getString("harga"));
@@ -224,7 +225,7 @@ public class DetailPesanan extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         DetailPesanan.this.finish();
-        startActivity(new Intent(DetailPesanan.this, DataProduk.class));
+        startActivity(new Intent(DetailPesanan.this, BottNavigation.class));
     }
 
 }

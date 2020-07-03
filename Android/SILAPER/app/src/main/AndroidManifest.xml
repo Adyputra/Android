@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".configfile.AppController"
@@ -15,12 +15,19 @@
         android:icon="@drawable/logo"
         android:label="SILAPER"
         android:roundIcon="@drawable/logo"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".pemesanan.KonfirmasiBayar"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".produk.page.DetailProduk"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".produk.page.DataProduk"
+            android:theme="@style/Utama" />
+        <activity
+            android:name=".pemesanan.KonfirmasiBayar"
             android:label="Konfirmasi Pembayaran" />
-        <activity android:name=".MapsActivity"
+        <activity
+            android:name=".MapsActivity"
             android:label="Map" />
         <activity
             android:name=".profil.GantiPassword"
@@ -40,7 +47,6 @@
         <activity
             android:name=".pemesanan.FormPemesanan"
             android:theme="@style/Utama" />
-        <activity android:name=".pemesanan.DataProduk" />
         <activity android:name=".Undangan" />
         <activity android:name=".BottNavigation" />
         <activity android:name=".RegisterActivity" />

@@ -52,7 +52,7 @@ public class FormPemesanan extends AppCompatActivity {
         FormPemesanan.this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         progressDialog = new ProgressDialog(FormPemesanan.this);
         Intent data = getIntent();
-        kodebarang = data.getStringExtra("id_kalender");
+        kodebarang = data.getStringExtra("id_produk");
         kodeuser = authdata.getInstance(getApplicationContext()).getIdcosturmer();
         txalamat = findViewById(R.id.etxalamat);
         txcatatan = findViewById(R.id.etcatatan);
@@ -166,7 +166,7 @@ public class FormPemesanan extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("id_customer", kodeuser);
-                params.put("id_kalender", kodebarang);
+                params.put("id_produk", kodebarang);
                 params.put("kode_akunbank", kodebank);
                 params.put("qty", txqtybeli.getText().toString());
                 params.put("alamat_kirim", txalamat.getText().toString());
@@ -197,7 +197,7 @@ public class FormPemesanan extends AppCompatActivity {
 
                         JSONObject data = res.getJSONObject("data");
                         txnama.setText(data.getString("namaakun"));
-                        txnamabarang.setText(data.getString("nama_kalender"));
+                        txnamabarang.setText(data.getString("nama_produk"));
                         txharga.setText(Util.setformatrupiah(data.getString("harga")));
                         hargabarang = Integer.parseInt(data.getString("harga"));
                         txqtybeli.setText("1");
